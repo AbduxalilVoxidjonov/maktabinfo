@@ -1,0 +1,41 @@
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+}
+
+/* 5-bo'limda sarlavha ostida izoh bo'lgani uchun bo'shliq kichikroq */
+.headTight {
+  margin-bottom: var(--space-2);
+}
+
+.step {
+  width: 26px;
+  height: 26px;
+  flex: none;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: var(--font-base);
+  font-weight: var(--weight-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-3xl);
+  font-weight: var(--weight-semibold);
+}
+
+.description {
+  margin: 0 0 var(--space-6);
+  font-size: var(--font-sm);
+  color: var(--color-text-soft);
+}

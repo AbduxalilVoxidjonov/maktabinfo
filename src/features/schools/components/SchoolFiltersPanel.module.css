@@ -1,0 +1,151 @@
+/* Katalog filtrlar paneli (Katalog.dc.html, chap ustun) */
+.panel {
+  padding: var(--space-11) var(--space-9);
+  position: sticky;
+  /* Header ostidan chiqib ketmasligi uchun */
+  top: calc(var(--header-total-h) + var(--space-7));
+  /* Ro'yxat ekranga sig'masa panel ichida aylantiriladi */
+  max-height: calc(100vh - var(--header-total-h) - var(--space-14));
+  overflow-y: auto;
+}
+
+.title {
+  font-size: var(--font-3xl);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-strong);
+  margin-bottom: var(--space-9);
+}
+
+.groupLabel {
+  font-size: var(--font-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-9);
+}
+
+/* "Pullik" tanlanganda ochiladigan to'lov oralig'i */
+.feeGroup {
+  margin-bottom: var(--space-9);
+  padding: var(--space-6) var(--space-6) var(--space-5);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-2xl);
+  background: var(--color-surface-soft);
+}
+
+.feeGroup .groupLabel {
+  margin-bottom: var(--space-6);
+}
+
+.selects {
+  display: grid;
+  gap: var(--space-5);
+  margin-bottom: var(--space-9);
+}
+
+.clear {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: var(--font-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.clear:hover {
+  color: var(--color-accent-dark);
+}
+
+/* Yig'iladigan sarlavha — faqat tor ekranda ko'rinadi */
+.toggle {
+  display: none;
+}
+
+/* Tor ekrandagi "yopiq" holat uchun asos: keng ekranda doim ochiq */
+.body {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding: var(--space-5) var(--space-7);
+  }
+
+  .title {
+    display: none;
+  }
+
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    width: 100%;
+    padding: var(--space-2) 0;
+    border: 0;
+    background: none;
+    font-family: inherit;
+    font-size: var(--font-4xl);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-strong);
+    cursor: pointer;
+  }
+
+  .toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  .toggleLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  /* Yopiq holatda ham nechta filtr yoqilgani bilinib tursin */
+  .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 21px;
+    height: 21px;
+    padding: 0 6px;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent);
+    color: var(--color-on-primary);
+    font-size: var(--font-xs);
+    font-weight: var(--weight-semibold);
+  }
+
+  .chevron {
+    font-size: var(--font-3xl);
+    color: var(--color-text-soft);
+    transition: transform var(--transition-base);
+  }
+
+  .chevronOpen {
+    transform: rotate(180deg);
+  }
+
+  .body {
+    display: none;
+  }
+
+  .bodyOpen {
+    display: block;
+    padding-top: var(--space-9);
+  }
+}

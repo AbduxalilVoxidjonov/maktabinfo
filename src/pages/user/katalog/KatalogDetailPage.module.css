@@ -1,0 +1,14 @@
+/* Maktab batafsil sahifasi (Katalog.dc.html, `isCard`) */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: var(--font-md);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-6);
+  cursor: pointer;
+}
+
+.back:hover {
+  color: var(--color-primary);
+}

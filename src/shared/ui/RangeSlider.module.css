@@ -1,0 +1,122 @@
+.root {
+  display: block;
+}
+
+.slider {
+  position: relative;
+  height: 22px;
+  /* Tutqich radiusicha ichkariga surish — chekkalarda kesilmasin */
+  margin: 0 9px;
+}
+
+.track,
+.fill {
+  position: absolute;
+  top: 50%;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.track {
+  left: 0;
+  right: 0;
+  background: var(--color-border-strong);
+}
+
+.fill {
+  background: var(--color-accent);
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  left: -9px;
+  width: calc(100% + 18px);
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  appearance: none;
+  /* Faqat tutqich bosiladi — pastdagi slayder ham ushlanadi */
+  pointer-events: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-slider-runnable-track {
+  height: 22px;
+  background: none;
+  border: 0;
+}
+
+.input::-moz-range-track {
+  height: 22px;
+  background: none;
+  border: 0;
+}
+
+.input::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border-radius: var(--radius-circle);
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  box-shadow: var(--shadow-card-hover);
+  cursor: grab;
+  pointer-events: auto;
+  transition: transform var(--transition-fast);
+}
+
+.input::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-circle);
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  box-shadow: var(--shadow-card-hover);
+  cursor: grab;
+  pointer-events: auto;
+  transition: transform var(--transition-fast);
+}
+
+.input:hover::-webkit-slider-thumb,
+.input:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.12);
+}
+
+.input:hover::-moz-range-thumb,
+.input:focus-visible::-moz-range-thumb {
+  transform: scale(1.12);
+}
+
+.input:focus-visible::-webkit-slider-thumb {
+  border-color: var(--color-primary);
+}
+
+.input:focus-visible::-moz-range-thumb {
+  border-color: var(--color-primary);
+}
+
+.input:active::-webkit-slider-thumb {
+  cursor: grabbing;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.value {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}

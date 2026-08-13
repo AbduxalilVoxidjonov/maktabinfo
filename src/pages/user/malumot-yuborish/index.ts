@@ -1,0 +1,1 @@
+export { MalumotYuborishPage } from './MalumotYuborishPage';

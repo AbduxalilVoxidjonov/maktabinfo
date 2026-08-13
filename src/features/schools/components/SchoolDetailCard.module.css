@@ -1,0 +1,177 @@
+/* Maktab batafsil kartochkasi (Katalog.dc.html, `isCard` bo'limi) */
+.card {
+  overflow: hidden;
+}
+
+/* --- navy sarlavha --- */
+.header {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  padding: var(--space-12) var(--space-12) var(--space-11);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-7);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.name {
+  margin: 0 0 7px;
+  font-size: var(--font-9xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.address {
+  font-size: var(--font-lg);
+  color: var(--color-primary-subtle-text);
+}
+
+.headerBadges {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* --- asosiy qism --- */
+.body {
+  display: grid;
+  gap: var(--space-11);
+  padding: var(--space-11) var(--space-12) var(--space-12);
+  grid-template-columns: minmax(0, 1fr) var(--layout-aside);
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: var(--space-9);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 9px;
+}
+
+.director {
+  font-size: var(--font-3xl);
+  font-weight: var(--weight-medium);
+}
+
+.fee {
+  font-size: 20px;
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.01em;
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border-soft);
+  margin-bottom: var(--space-9);
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-9);
+}
+
+.pillsLast {
+  margin-bottom: var(--space-10);
+}
+
+/* --- aloqa tugmalari --- */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Maketdagi IG/TG tugmalari `lg` o'lchamidan biroz tor va kichik shriftli */
+.socialButton.socialButton {
+  padding: 0 var(--space-7);
+  font-size: var(--font-lg);
+  border-radius: var(--radius-xl);
+}
+
+.igIcon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.igDot {
+  width: 8px;
+  height: 8px;
+  border: 2px solid currentColor;
+  border-radius: var(--radius-circle);
+}
+
+/* --- o'ng ustun: galereya (xarita bloki vaqtincha olib tashlangan) --- */
+.gallery {
+  margin-bottom: 0;
+}
+
+.mainPhoto {
+  /* 440px (--layout-aside) × 300px — xarita bloki olib tashlangach kengaytirildi */
+  height: 300px;
+  border-radius: var(--radius-3xl);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-photo-placeholder);
+  background-size: cover;
+  background-position: center;
+}
+
+.thumbs {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.thumb {
+  width: 62px;
+  height: 48px;
+  padding: 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  background-color: var(--color-photo-placeholder);
+  background-size: cover;
+  background-position: center;
+  transition: border-color var(--transition-fast);
+}
+
+.thumb:hover,
+.thumbActive {
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .facts {
+    grid-template-columns: 1fr;
+  }
+}

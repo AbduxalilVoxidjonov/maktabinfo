@@ -1,0 +1,55 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  font-family: inherit;
+  font-size: var(--font-md);
+  font-weight: var(--weight-medium);
+  line-height: 1;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  user-select: none;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-strong);
+  transition: all var(--transition-fast);
+}
+
+/* Tanlanmagan chip ustida — yengil yashil ishora */
+.chip:hover:not(:disabled) {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent-border);
+  color: var(--color-accent-dark);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.chip:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.sm {
+  padding: 5px 11px;
+  font-size: var(--font-sm);
+}
+
+/* Tanlangan holat — to'ldirilgan yashil pill (oq matn kontrasti 5.1:1) */
+.chip.selected {
+  background: var(--color-accent);
+  color: var(--color-on-primary);
+  border-color: var(--color-accent);
+}
+
+/*
+ * Tanlangan chip hover'i .chip:hover:not(:disabled) dan kuchliroq bo'lishi SHART
+ * (0,4,0 > 0,3,0) — aks holda oq matn yashil fonda ko'rinmay qoladi.
+ */
+.chip.selected:hover:not(:disabled) {
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: var(--color-on-primary);
+}

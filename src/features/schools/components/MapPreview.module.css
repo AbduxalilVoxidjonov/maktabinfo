@@ -1,0 +1,84 @@
+/* Katalog.dc.html dagi "soxta xarita" grafikasi (rasm bo'lmaganda / batafsil oynada) */
+.map {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(var(--color-map-from), var(--color-map-to));
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, var(--color-surface) 2px, transparent 2px),
+    linear-gradient(var(--color-surface) 2px, transparent 2px);
+  opacity: 0.7;
+}
+
+.road {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--color-map-road);
+}
+
+.street {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 32%;
+  width: 7px;
+  background: var(--color-surface);
+}
+
+.pin {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-circle) var(--radius-circle) var(--radius-circle) 0;
+  transform: rotate(-45deg);
+  background: var(--color-map-pin);
+}
+
+/* --- kichik variant: ro'yxat kartochkasi --- */
+.sm {
+  height: var(--card-media-h);
+  border-radius: var(--radius-2xl);
+}
+
+.sm .grid {
+  background-size: 44px 34px;
+}
+
+.sm .road {
+  top: 60%;
+  height: 7px;
+}
+
+.sm .pin {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-surface);
+}
+
+/* --- katta variant: batafsil oyna --- */
+.lg {
+  height: 210px;
+}
+
+.lg .grid {
+  background-size: 52px 40px;
+}
+
+.lg .road {
+  top: 56%;
+  height: 9px;
+}
+
+.lg .pin {
+  width: 26px;
+  height: 26px;
+  border: 3px solid var(--color-surface);
+  box-shadow: var(--shadow-pin);
+}

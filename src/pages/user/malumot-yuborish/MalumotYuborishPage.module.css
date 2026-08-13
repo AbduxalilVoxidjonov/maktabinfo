@@ -1,0 +1,174 @@
+/* Ikki ustun: forma + jonli preview (maketda "minmax(0,1fr) 320px") */
+.layout {
+  display: grid;
+  gap: var(--space-9);
+  align-items: start;
+  grid-template-columns: minmax(0, 1fr) var(--layout-preview);
+}
+
+.column {
+  min-width: 0;
+}
+
+.intro {
+  margin-bottom: var(--space-8);
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-9xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 0;
+  font-size: var(--font-xl);
+  line-height: 1.55;
+  color: var(--color-text-tertiary);
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+
+/* Ikki maydonli qatorlar (1-bo'lim, 6-bo'limdagi IG/TG) */
+.pair {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr 1fr;
+}
+
+.stack {
+  margin-bottom: var(--space-6);
+}
+
+.hint {
+  margin: var(--space-3) 0 0;
+  font-size: var(--font-sm);
+  color: var(--color-text-soft);
+}
+
+.feeField {
+  margin-top: var(--space-6);
+}
+
+.phoneInput {
+  letter-spacing: 0.02em;
+}
+
+/* 4-bo'lim: chip guruhlari */
+.groupLabel {
+  font-size: var(--font-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: 9px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.chipsGap {
+  margin-bottom: var(--space-8);
+}
+
+.gradesHint {
+  margin: var(--space-4) 0 var(--space-8);
+  font-size: var(--font-sm);
+  color: var(--color-text-soft);
+}
+
+.sportsToggle {
+  margin-top: var(--space-8);
+}
+
+.fieldError {
+  display: block;
+  font-size: 12px;
+  color: var(--color-danger);
+  margin-top: var(--space-4);
+}
+
+/* 6-bo'limdagi yashil eslatma */
+.callout {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent-border);
+  border-radius: var(--radius-lg);
+  padding: 11px var(--space-5);
+  margin: var(--space-5) 0 var(--space-7);
+}
+
+.calloutIcon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin-top: 1px;
+  border-radius: var(--radius-circle);
+  background: var(--color-accent);
+  color: var(--color-on-primary);
+  font-size: 12px;
+  font-weight: var(--weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calloutText {
+  font-size: var(--font-base);
+  line-height: 1.5;
+  color: var(--color-accent-text-dark);
+}
+
+.calloutLink {
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent);
+}
+
+/* Pastki tugmalar qatori */
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  /* Oxirgi bo'limning 14px pastki bo'shlig'i ustiga — maketdagi 18px */
+  margin-top: var(--space-1);
+}
+
+.summaryError {
+  font-size: var(--font-base);
+  color: var(--color-danger);
+  margin-right: auto;
+}
+
+/* Tor ekran: bitta ustun, preview yashiriladi (maketdagi showPreview: !narrow) */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .preview {
+    display: none;
+  }
+
+  .pair {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: var(--font-6xl);
+  }
+}

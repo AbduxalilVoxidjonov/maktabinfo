@@ -1,0 +1,40 @@
+/* Katalog ro'yxati sahifasi (Katalog.dc.html, `isList`) */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-7);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-8);
+}
+
+.resultLabel {
+  margin: 0;
+  font-size: var(--font-lg);
+  color: var(--color-text-tertiary);
+}
+
+.search {
+  flex: 1;
+  min-width: 240px;
+  max-width: 420px;
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-8);
+  align-items: start;
+  grid-template-columns: var(--layout-sidebar) minmax(0, 1fr);
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

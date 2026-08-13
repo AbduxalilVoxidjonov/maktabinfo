@@ -1,0 +1,39 @@
+.empty {
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-14);
+  text-align: center;
+  color: var(--color-text-soft);
+  font-size: var(--font-lg);
+  line-height: 1.5;
+}
+
+.compact {
+  padding: var(--space-8);
+  font-size: var(--font-base);
+}
+
+.icon {
+  display: block;
+  font-size: 26px;
+  margin-bottom: var(--space-3);
+  color: var(--color-muted);
+}
+
+.title {
+  margin: 0;
+  font-size: inherit;
+  font-weight: var(--weight-medium);
+  color: var(--color-text-soft);
+}
+
+.description {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-base);
+  color: var(--color-muted);
+}
+
+.action {
+  margin-top: var(--space-6);
+}

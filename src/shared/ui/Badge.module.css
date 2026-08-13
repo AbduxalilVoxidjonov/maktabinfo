@@ -1,0 +1,103 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-2xs);
+  font-weight: var(--weight-semibold);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.pending {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+
+.approved {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.rejected {
+  background: var(--color-neutral-bg);
+  color: var(--color-neutral-text);
+}
+
+/* Ro'yxat kartochkasidagi "YANGI" belgisi */
+.new {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+  padding: 3px 7px;
+  border-radius: var(--radius-sm);
+}
+
+.neutral {
+  background: var(--color-neutral-bg);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-tag);
+}
+
+/* Batafsil oyna sarlavhasidagi yashil belgi */
+.accent {
+  background: var(--color-accent);
+  color: var(--color-on-primary);
+  font-size: var(--font-sm);
+  font-weight: var(--weight-medium);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+/* Navy sarlavha ustidagi shaffof belgi */
+.onDark {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--color-on-primary);
+  font-size: var(--font-sm);
+  font-weight: var(--weight-medium);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+/* Tillar uchun ko'k tablet */
+.lang {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: var(--font-base);
+  font-weight: var(--weight-medium);
+  padding: 6px 13px;
+  border-radius: var(--radius-pill);
+}
+
+/* Ixtisoslashuv uchun yashil tablet */
+.spec {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border-color: var(--color-accent-border);
+  font-size: var(--font-base);
+  font-weight: var(--weight-medium);
+  padding: 6px 13px;
+  border-radius: var(--radius-pill);
+}
+
+/* Kartochkadagi kichik teg */
+.tag {
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-tag);
+  font-size: var(--font-xs);
+  font-weight: var(--weight-medium);
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+}
+
+/* Joriy filtrga mos tushgan teg — .tag bilan bir o'lchamda, yashil to'ldirilgan */
+.tagMatch {
+  background: var(--color-accent);
+  color: var(--color-on-primary);
+  border-color: var(--color-accent);
+  font-size: var(--font-xs);
+  font-weight: var(--weight-semibold);
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+}

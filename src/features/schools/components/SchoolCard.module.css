@@ -1,0 +1,97 @@
+/* Katalog ro'yxatidagi maktab kartochkasi (Katalog.dc.html, `results` bo'limi) */
+.link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: inherit;
+}
+
+.card {
+  display: grid;
+  gap: var(--space-9);
+  align-items: center;
+  grid-template-columns: var(--card-media-w) minmax(0, 1fr) auto;
+}
+
+.photo {
+  height: var(--card-media-h);
+  border-radius: var(--radius-2xl);
+  background-color: var(--color-photo-placeholder);
+  background-size: cover;
+  background-position: center;
+}
+
+.body {
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-1);
+}
+
+.name {
+  font-size: var(--font-4xl);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-strong);
+}
+
+.meta {
+  font-size: var(--font-lg);
+  color: var(--color-text-soft);
+  margin-bottom: var(--space-5);
+}
+
+/* Direktor manzil bilan bir qatorda emas, alohida qatorda */
+.director {
+  margin-top: var(--space-1);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 9px;
+}
+
+.fee {
+  font-size: var(--font-2xl);
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+  color: var(--color-text-strong);
+}
+
+.more {
+  font-size: var(--font-base);
+  color: var(--color-accent);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  /* Tor ekranda rasm butun kenglikni egallaydi va balandroq bo'ladi */
+  .card {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    --card-media-h: 200px;
+  }
+
+  .side {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
