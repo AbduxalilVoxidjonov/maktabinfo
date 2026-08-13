@@ -144,8 +144,8 @@ export const REAL_SCHOOLS: School[] = [
     grades: [], // TODO: formada berilmagan
     hasSports: false, // TODO: formada berilmagan
     // TODO: to'lov maydoni bo'sh kelgan — bepul yoki pullikligini aniqlash kerak.
-    paid: false,
-    fee: '',
+    paid: true,
+    fee: 'To\'lov miqdorini maktab bilan aniqlashtirish mumkun',
     langs: ["O'zbek"],
     specs: [
       'Matematika',
